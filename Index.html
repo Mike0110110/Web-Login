@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
+  <title>Contact Us Form</title>
+  <link rel="shortcut icon" type="image/x-icon" href="quino-al-4SNUcHPiC8c-unsplash.png" />
+  <link rel="stylesheet" href="Styles.css" />  
+</head>
+
+<body>
+  <div id="container">
+    <aside class="Left-article-Blue"></aside>
+    <div class="wrapper">
+      <!-- Error message Box -->
+      <div id="error_message">
+        <div class="error-wrap">
+          <div class="icon-wrap">
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          </div>
+          <div class="error" id="error-js"></div>
+          <div class="btn-error">
+            <input type="button" id="btnOK" value="OK" onclick="closeError();" />
+          </div>
+        </div>
+      </div>
+      <!-- Error message Box -->
+
+      <div id="myForm">
+        <div style="width:100%; margin:0% auto;">
+          <span class="container-bar" style="justify-content:flex-start;margin:0 5% 5% 5%;">
+            <h2>Basic Details</h2>
+          </span>
+          <div style="width:100%; margin:0% auto">
+            <span class="container-bar">
+              <span style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);display: inline-block; width:100%;"></span>
+            </span>
+            <div class="wrap">
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <span class="container-bar">
+                  <span>
+                    <input type="text" name="value-bar" id="value-bar" placeholder="First Name"
+                      class="label-firstName-js label-js" />
+                    <label for="value-bar" id="label-FN">First Name</label>
+                  </span>
+                  <span>
+                    <input type="text" name="value-bar1" id="value-bar1" placeholder="Last Name"
+                      class="label-lastName-js label-js" />
+                    <label for="value-bar1" id="label-LN">Last Name</label>
+                  </span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <span class="container-bar">
+                  <span>
+                    <input type="text" name="value-bar2" id="value-bar2" placeholder="First Name"
+                      class="label-Email-js label-js" />
+                    <label for="value-bar2" id="label-EID">Email ID</label>
+                  </span>
+                  <span>
+                    <input type="text" name="value-bar3" id="value-bar3" placeholder="First Name"
+                      class="label-userID-js label-js" />
+                    <label for="value-bar3" id="label-UserID">Your User ID</label>
+                    <span class="label-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                  </span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <span class="container-bar">
+                  <span>
+                    <label for="value-bar4" id="label-Country">Country</label>
+                    <select class="box label-country-js label-js">
+                      <option value="false" selected="selected" disabled="disabled" >Select a Country</option>
+                      <option value="America">America</option>
+                      <option value="Australia">Australia</option>
+                      <option value="England">England</option>
+                    </select>
+                  </span>
+                  <span class="Location-wrap" style="margin-right: 0;">
+                    <label for="value-bar5" id="label-state">State</label>
+                    <select class="box label-state-js label-js">
+                      <option value="false" selected="selected" disabled="disabled">Select a State</option>
+                      <option value="Alabama">Alabama</option>
+                      <option value="Queensland">Queensland</option>
+                      <option value="West Midlands">West Midlands</option>
+                    </select>
+                  </span>
+                  <span class="Location-wrap">
+                    <label for="value-bar6" id="label-city" >City</label>
+                    <select class="box label-city-js">
+                      <option value="false" selected="selected" disabled="disabled">Select a City</option>
+                      <option value="Akron">Akron</option>
+                      <option value="Brisbane">Brisbane</option>
+                      <option value="Birmingham">Birmingham</option>
+                    </select>
+                  </span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <span class="container-bar">
+                  <span>
+                    <input type="text" name="value-bar" id="value-bar7" placeholder="First Name"
+                      class="label-phoneNum-js label-js" />
+                    <label for="value-bar" id="label-phoneNum">Phone Number</label>
+                  </span>
+                  <span>
+                    <input type="text" name="value-bar" id="value-bar8" placeholder="Reference Code"
+                      class="label-referenceCode-js label-js" />
+                    <label for="value-bar" id="label-refCode">Reference Code</label>
+                  </span>
+                </span>
+              </div>
+              <div style="width:100%; margin:5% auto">
+                <span class="container-bar">
+                  <span style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);display: inline-block; width:100%;"></span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <span class="container-bar">
+
+                  <span>
+                    <a onclick="resetFields();" class="btn-Reset">Reset All</a>
+                  </span>
+                  <span>
+
+                    <div class="btn">
+                      <input type="Submit" id="btnSubmit" value="Continue" onclick="validationError()" />
+                    </div>
+
+                  </span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+
+            </div>
+
+            <!-- Success message Box -->
+            <div id="Success_message">
+              <div class="Success-wrap">
+                <div class="icon-wrap">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <div class="Success" id="Success-js"></div>
+                <div class="btn-Success">
+                  <input type="button" id="btnOK" value="OK" onclick="closeSuccess();" />
+                </div>
+              </div>
+            </div>
+            <!-- Success message Box -->
+          </div>
+        </div>
+      </div>
+
+      <div id="myForm2">
+        <div style="width:100%; margin:0% auto;">
+          <span class="container-bar" style="justify-content:flex-start;margin:0 5% 5% 5%;">
+            <h2>Basic Details</h2>
+          </span>
+          <div style="width:100%; margin:0% auto">
+            <span class="container-bar" style="margin-top:0;">
+              <span style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);display: inline-block; width:100%;"></span>
+            </span>
+            <div class="wrap">
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <div class="container-bar" style="margin-top:0;">
+                  <div class="detailedCard">
+                    <div>
+                      <h4><strong>First Name: </strong></h4>
+                    </div>
+                    <span class="User-input-name"></span>
+                  </div>
+                  <div class="detailedCard">
+                    <div>
+                      <h4><strong>Last Name: </strong></h4>
+                    </div>
+                    <span class="User-input-lastname"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <div class="container-bar" style="margin-top:0;">
+                  <div class="detailedCard">
+                    <div>
+                      <h4><strong>Email ID: </strong></h4>
+                    </div>
+                    <span class="User-input-email"></span>
+                  </div>
+                  <div class="detailedCard">
+                    <div>
+                      <h4><strong>User ID: </strong></h4>
+                    </div>
+                    <span class="User-input-UserID"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <div class="container-bar" style="margin-top:0;">
+                  <div class="detailedCard" style="width: 30%; margin:0% 1%;">
+                    <div>
+                      <h4><strong>Country: </strong></h4>
+                    </div>
+                    <span class="User-input-Country"></span>
+                  </div>
+                  <span class="detailedCard" style="width: 30%; margin:0%;">
+                    <div>
+                      <h4><strong>State: </strong></h4>
+                    </div>
+                    <span class="User-input-state"></span>
+                  </span>
+                  <div class="detailedCard" style="width: 30%; margin:0% 1%;">
+                    <div>
+                      <h4><strong>City: </strong></h4>
+                    </div>
+                    <span class="User-input-city"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">
+                <div class="container-bar" style="margin-top:0;">
+                  <div class="detailedCard">
+                      <div>
+                        <h4><strong>Phone Number: </strong></h4>
+                      </div>
+                    <span class="User-input-phoneNum"></span>
+                    </div>
+                  <div class="detailedCard">
+                    <div>
+                      <h4><strong>Reference Code: </strong></h4>
+                    </div>
+                    <span class="User-input-refCode"></span>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="width:100%; margin:5% auto">
+                <span class="container-bar" style="margin-top:0;">
+                  <span style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);display: inline-block; width:100%;"></span>
+                </span>
+              </div>
+
+              <!-- ---------------------------------------------------------------- -->
+
+              <!-- ---------------------------------------------------------------- -->
+              <div class="input_field">    
+                    <div class="btn">
+                      <input type="Submit" id="btnSubmit" value="Back" onclick="returnMainPage();"/>
+                    </div>
+                  </span>
+                </span>
+              </div>
+              <!-- ---------------------------------------------------------------- -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="App.js"></script>
+</body>
+
+</html>
